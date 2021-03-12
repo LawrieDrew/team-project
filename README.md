@@ -1,3 +1,3 @@
 # team-project
 
-You guys rock!
+You guys rock! I love this class!
