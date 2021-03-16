@@ -37,9 +37,22 @@ var cardFilteredArray = [];//all possible cards based on user inputs
 var userArray = []; //where the 3 randomized cards live
 
 //moment.js check for birthday value. if OK then continue, if not, return - NEIL
+currentDate = moment().format("MM/DD/YYYY");
+console.log(currentDate);
+
+var DOBInput = document.querySelector("#birthday");
+
+var birthday = moment(DOBInput.textContent).format("MM/DD/YYYY");
+console.log(birthday);
 
 //on click run function to generate tarot cards
 startBtn.addEventListener('click', function(){
+   // if statement for birthday
+   if ((moment(currentDate).diff(moment(birthday), "years") < 21)) {
+    console.log("too young!");
+    return
+    }
+
     //if statement to check for user input values and creates custom user array
     if (brandyBox.checked) {
         cardFilteredArray = cardFilteredArray.concat(brandyArray);
