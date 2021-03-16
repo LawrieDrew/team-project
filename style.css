@@ -1,0 +1,11 @@
+.card {
+    margin-top: 15%;
+}
+
+body {
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}

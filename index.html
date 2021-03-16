@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="" href=""/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="style.css">
     <link rel="" href=""/>
     <link rel="" href=""/>
 
@@ -20,49 +21,71 @@
 
 <!--on landing page, two models, one with birthday input and one multi select for liquor-->
 <!--return value of less than or more than 21 "Stars Align/Do Not Align"-->
+    <div class="row">
+            <div class="mb-3">
+            <label for="birthday" class="form-label">Your Birthday</label>
+            <input type="text" class="form-control" id="birthday" placeholder="XX/XX/XXXX">
+            <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="brandy">
+            <label class="form-check-label" for="brandy">brandy</label>
+            </div>
+            <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="vodka">
+                <label class="form-check-label" for="vodka">vodka</label>
+                </div>
+            <button class="btn btn-primary" id="start">Submit</button>
 
-<div class="container">
-    <button>Drink</button>
-    <div class="modal" id="birthday">
-        <input type="text" id="birthdate" placeholder="xx/xx/xxxx">
-    </div>    
-    <div class="modal" id="liquor group">
-        <input type="checkbox" id="brandy" value="brandy">
-        <label for="brandy">Brandy</label>
-        <button type="button">Bottoms Up</button>
+        <!--image, name of card, high level descrp., detailed descrp on back ie four p tags-->
+        <!--five card options, present three to user-->
+        <div class="container">
+            <div id="card-one" class="row hidden">
+                <div class="card col-6">
+                    <div class="card-body" id = "card-one">
+                    <h5 class="card-title" id="first-card-title">Card title</h5>
+                    <img src="" id="card-one-pic">
+                    <p class="card-text" id="first-card-meaning_up">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">READ</a>
+                    </div>
+                </div>
+                <div class="card col-6">
+                    <div class="card-body" id = "card-one">
+                    <p class="card-text" id="first-card-desc">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+            </div>
+            <div id="card-two" class="row hidden">
+                <div class="card col-6">
+                    <div class="card-body" id = "card-two">
+                    <h5 class="card-title" id="second-card-title">Card title</h5>
+                    <img src="" id="card-two-pic">
+                    <p class="card-text" id="second-card-meaning_up">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">READ</a>
+                    </div>
+                </div>
+                <div class="card col-6">
+                    <div class="card-body" id = "card-two">
+                    <p class="card-text" id="second-card-desc">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+            </div>
+            <div id="card-three" class="row hidden">
+                <div class="card col-6">
+                    <div class="card-body" id = "card-three">
+                    <h5 class="card-title" id="third-card-title">Card title</h5>
+                    <img src="" id="card-three-pic">
+                    <p class="card-text" id="third-card-meaning_up">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">READ</a>
+                    </div>
+                </div>
+                <div class="card col-6">
+                    <div class="card-body" id = "card-three">
+                    <p class="card-text" id="third-card-desc">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
-
-<!--image, name of card, high level descrp., detailed descrp on back ie four p tags-->
-<!--five card options, present three to user-->
-    <div class="card" id="card-1">
-        <h2 id="title-card-1">Title Card</h2>
-        <img id="card-1-image" src="">
-        <p id="desc-card-1">description</p>
-    </div>
-    <div class="face-back">
-        <h2>Back of Card</h2>
-        <p id="detailed-card-1">detailed</p>
-    </div>
-    <div class=""></div>
-
-
-    <div class="card">
-        <h2>Front</h2>
-    </div>
-    <div class="face-back">
-        <h2>Back</h2>
-    </div>
-    <div class=""></div>
-
-    <div class="card">
-        <h2>Front</h2>
-    </div>
-    <div class="face-back">
-        <h2>Back</h2>
-    </div>
-    <div class=""></div>
-
+        
 
 
 
@@ -73,7 +96,7 @@
 
 
     
-    <script src=""></script>
+    <script src="script.js"></script>
     <script src=""></script>
     <script src=""></script>
 
