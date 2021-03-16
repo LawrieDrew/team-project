@@ -77,13 +77,13 @@ startBtn.addEventListener('click', function(){
         var cardOneMeaningUpText = resultsArray[0]['meaning_up'];
         console.log(cardOneMeaningUpText);
         var cardOnePicTitle = cardOneTitleText.split(" ").join("")//Removes spaces from title to format for jpeg
-        var jpegOne = "assets/"+cardOnePicTitle + ".jpg";
-        console.log(jpegOne)
+        var pngOne = "assets/"+cardOnePicTitle + ".PNG";
+        console.log(pngOne)
 
         cardOneTitle.innerText = cardOneTitleText;
         cardOneDesc.innerText = cardOneDescText;
         cardOneMeaningUp.innerText = cardOneMeaningUpText;
-        cardOnePic.src=jpegOne
+        cardOnePic.src=pngOne
         cardOne.classList.add(cardOnePicTitle);
 
         //card two 
@@ -94,13 +94,13 @@ startBtn.addEventListener('click', function(){
         var cardTwoMeaningUpText = resultsArray[1]['meaning_up'];
         console.log(cardTwoMeaningUpText);
         var cardTwoPicTitle = cardTwoTitleText.split(" ").join("")//Removes spaces from title to format for jpeg
-        var jpegTwo = "assets/"+cardTwoPicTitle + ".jpg";
-        console.log(jpegTwo)
+        var pngTwo = "assets/"+cardTwoPicTitle + ".PNG";
+        console.log(pngTwo)
 
         cardTwoTitle.innerText = cardTwoTitleText;
         cardTwoDesc.innerText = cardTwoDescText;
         cardTwoMeaningUp.innerText = cardTwoMeaningUpText;
-        cardTwoPic.src=jpegTwo
+        cardTwoPic.src=pngTwo
         cardTwo.classList.add(cardTwoPicTitle);
     
 
@@ -112,13 +112,13 @@ startBtn.addEventListener('click', function(){
         var cardThreeMeaningUpText = resultsArray[2]['meaning_up'];
         console.log(cardThreeMeaningUpText);
         var cardThreePicTitle = cardThreeTitleText.split(" ").join("")//Removes spaces from title to format for jpeg
-        var jpegThree = "assets/"+cardThreePicTitle + ".jpg";
-        console.log(jpegThree)
+        var pngThree = "assets/"+cardThreePicTitle + ".PNG";
+        console.log(pngThree)
 
         cardThreeTitle.innerText = cardThreeTitleText;
         cardThreeDesc.innerText = cardThreeDescText;
         cardThreeMeaningUp.innerText = cardThreeMeaningUpText;
-        cardThreePic.src=jpegThree
+        cardThreePic.src=pngThree
         cardThree.classList.add(cardThreePicTitle);
 
         cardOne.classList.remove("hidden");
