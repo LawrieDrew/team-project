@@ -1,5 +1,5 @@
 //UI elements
-var brandyBox = document.getElementById('brandy');
+var brandyBox = document.getElementById('brandy');//Must add all alcohol options
 var vodkaBox = document.getElementById('vodka');
 var card = document.querySelectorAll('.card');
 var cardOne = document.getElementById('card-one');
@@ -25,7 +25,7 @@ var cardTwoTitleText;
 var cardOneTitleText;
 
 //Alcohol + Card Pairings Arrays
-var brandyArray = [ {name:"The Magician"}, {name:"The High Priestess"}, {name:"The Empress"}]
+var brandyArray = [ {name:"The Magician"}, {name:"The High Priestess"}, {name:"The Empress"}] //Must add all arrays as decided by group
 var vodkaArray = [{name:"The Emperor"}, {name:"The Hierophant"}, {name:"The Lovers"}]
 
 var alcoholChoice=[]; //variable to hold all alcohol associated with card
@@ -42,11 +42,16 @@ console.log(currentDate);
 
 var DOBInput = document.querySelector("#birthday");
 
-var birthday = moment(DOBInput.textContent).format("MM/DD/YYYY");
-console.log(birthday);
+
 
 //on click run function to generate tarot cards
 startBtn.addEventListener('click', function(){
+    var userBirthday = DOBInput.value
+    console.log(userBirthday);
+    var birthday = moment(userBirthday).format("MM/DD/YYYY");
+    console.log(birthday)
+
+
    // if statement for birthday
    if ((moment(currentDate).diff(moment(birthday), "years") < 21)) {
     console.log("too young!");
@@ -54,7 +59,7 @@ startBtn.addEventListener('click', function(){
     }
 
     //if statement to check for user input values and creates custom user array
-    if (brandyBox.checked) {
+    if (brandyBox.checked) { //run if statement to check for "checks" for each alcohol type
         cardFilteredArray = cardFilteredArray.concat(brandyArray);
     } 
 
@@ -63,9 +68,11 @@ startBtn.addEventListener('click', function(){
     }
     console.log(cardFilteredArray)
 
-    for (var i = 0; i < 3; i++){
+    while (userArray.length < 3){
         var options = cardFilteredArray[Math.floor(Math.random()*cardFilteredArray.length)];
-        userArray.push(options)
+        if (!userArray.some( function(user) { return user.name === options.name } ) ) { //checks for duplicate values
+            userArray.push(options);
+        }
     }
 
     console.log(userArray)
@@ -144,11 +151,20 @@ startBtn.addEventListener('click', function(){
     })
     //Click actions for each card. Proper alcohol array is returned
         cardOne.addEventListener('click', function(){
-        if (cardOne.classList.contains("TheMagician"||"TheHighPriestess"||"TheEmpress")){
+        if (cardOne.classList.contains("TheMagician")){ //will need an else if statement for each card Name and add to card One Two and Three
             alcohol="brandy"
-        } else if (cardOne.classList.contains("TheEmperor"||"TheHierophant"||"TheLovers")){
+        }   else if (cardOne.classList.contains("TheHighPriestess")){
+            alcohol="brandy"
+        }   else if (cardOne.classList.contains("TheEmpress")){
+            alcohol="brandy" 
+        } else if (cardOne.classList.contains("TheEmperor")){
             alcohol="vodka"
-        }
+        }   else if (cardOne.classList.contains("TheHierophant")){
+            alcohol="vodka" 
+        } else if (cardOne.classList.contains("TheLovers")){
+            alcohol="vodka"
+        }  
+    
         console.log(alcohol)
         
         fetch('https://www.thecocktaildb.com/api/json/v1/1/filter.php?i='+alcohol)//change this variable to reflect the UserCardChoice
@@ -165,9 +181,17 @@ startBtn.addEventListener('click', function(){
     })
 
         cardTwo.addEventListener('click', function(){
-            if (cardTwo.classList.contains("TheMagician"||"TheHighPriestess"||"TheEmpress")){
+            if (cardOne.classList.contains("TheMagician")){
                 alcohol="brandy"
-            } else if (cardTwo.classList.contains("TheEmperor"||"TheHierophant"||"TheLovers")){
+            }   else if (cardOne.classList.contains("TheHighPriestess")){
+                alcohol="brandy"
+            }   else if (cardOne.classList.contains("TheEmpress")){
+                alcohol="brandy" 
+            } else if (cardOne.classList.contains("TheEmperor")){
+                alcohol="vodka"
+            }   else if (cardOne.classList.contains("TheHierophant")){
+                alcohol="vodka" 
+            } else if (cardOne.classList.contains("TheLovers")){
                 alcohol="vodka"
             }
             fetch('https://www.thecocktaildb.com/api/json/v1/1/filter.php?i='+alcohol)//change this variable to reflect the UserCardChoice
@@ -185,9 +209,17 @@ startBtn.addEventListener('click', function(){
         })
 
         cardThree.addEventListener('click', function(){
-            if (cardThree.classList.contains("TheMagician"||"TheHighPriestess"||"TheEmpress")){
+            if (cardOne.classList.contains("TheMagician")){
                 alcohol="brandy"
-            } else if (cardThree.classList.contains("TheEmperor"||"TheHierophant"||"TheLovers")){
+            }   else if (cardOne.classList.contains("TheHighPriestess")){
+                alcohol="brandy"
+            }   else if (cardOne.classList.contains("TheEmpress")){
+                alcohol="brandy" 
+            } else if (cardOne.classList.contains("TheEmperor")){
+                alcohol="vodka"
+            }   else if (cardOne.classList.contains("TheHierophant")){
+                alcohol="vodka" 
+            } else if (cardOne.classList.contains("TheLovers")){
                 alcohol="vodka"
             }
             fetch('https://www.thecocktaildb.com/api/json/v1/1/filter.php?i='+alcohol)//change this variable to reflect the UserCardChoice

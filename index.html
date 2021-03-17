@@ -14,13 +14,6 @@
 </head>
 
 <body>
-<!--on click btn "enter birthday" on landing page with FT Woman/text input-->
-<!--moment: what liquor do you have?/text input/multi-select(brandy, vodka, gin, rum, tequila, whiskey-->
-<!--Begin btn (submit)-->
-
-
-<!--on landing page, two models, one with birthday input and one multi select for liquor-->
-<!--return value of less than or more than 21 "Stars Align/Do Not Align"-->
     <div class="row">
             <div class="mb-3">
             <label for="birthday" class="form-label">Your Birthday</label>
@@ -39,45 +32,47 @@
         <!--five card options, present three to user-->
         <div class="container">
             <div id="card-one" class="row hidden">
-                <div class="card col-6">
-                    <div class="card-body" id = "card-one">
-                    <h5 class="card-title" id="first-card-title">Card title</h5>
-                    <img src="" id="card-one-pic">
-                    <p class="card-text" id="first-card-meaning_up">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">READ</a>
+                <div class="card col-6 front">
+                    <div class="card-body">
+                        <h5 class="card-title" id="first-card-title">Card title</h5>
+                        <img src="" id="card-one-pic">
+                        <p class="card-text" id="first-card-meaning_up">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">READ</a>
                     </div>
                 </div>
-                <div class="card col-6">
-                    <div class="card-body" id = "card-one">
+                <div class="card col-6 back">
+                    <div class="card-body">
                     <p class="card-text" id="first-card-desc">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     </div>
                 </div>
             </div>
+
             <div id="card-two" class="row hidden">
-                <div class="card col-6">
-                    <div class="card-body" id = "card-two">
+                <div class="card col-6 front">
+                    <div class="card-body">
                     <h5 class="card-title" id="second-card-title">Card title</h5>
                     <img src="" id="card-two-pic">
                     <p class="card-text" id="second-card-meaning_up">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     <a href="#" class="btn btn-primary">READ</a>
                     </div>
                 </div>
-                <div class="card col-6">
-                    <div class="card-body" id = "card-two">
+                <div class="card col-6 back">
+                    <div class="card-body">
                     <p class="card-text" id="second-card-desc">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     </div>
                 </div>
             </div>
+
             <div id="card-three" class="row hidden">
-                <div class="card col-6">
-                    <div class="card-body" id = "card-three">
+                <div class="card col-6 front">
+                    <div class="card-body">
                     <h5 class="card-title" id="third-card-title">Card title</h5>
                     <img src="" id="card-three-pic">
                     <p class="card-text" id="third-card-meaning_up">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     <a href="#" class="btn btn-primary">READ</a>
                     </div>
                 </div>
-                <div class="card col-6">
+                <div class="card col-6 back">
                     <div class="card-body" id = "card-three">
                     <p class="card-text" id="third-card-desc">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     </div>
@@ -96,9 +91,8 @@
 
 
     
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="script.js"></script>
-    <script src=""></script>
-    <script src=""></script>
 
 </body>
 
