@@ -5,9 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Macondo+Swash+Caps&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="" href=""/>
-    <link rel="" href=""/>
+    <link rel="stylesheet" href="reset.css">
+    
 
     <title>Tipsy Tarot</title>
 
@@ -18,28 +20,49 @@
 <!--moment: what liquor do you have?/text input/multi-select(brandy, vodka, gin, rum, tequila, whiskey-->
 <!--Begin btn (submit)-->
 
+<header class="header">
+    <div class="main-box">
+        <h1 class="heading-primary">Tipsy Tarot</h1>
+        <a href="#" id="drink" class="btn btn-main">Let's Drink</a>
+    </div>
 
 <!--on landing page, two models, one with birthday input and one multi select for liquor-->
 <!--return value of less than or more than 21 "Stars Align/Do Not Align"-->
     <div class="row">
-            <div class="mb-3">
-            <label for="birthday" class="form-label">Your Birthday</label>
-            <input type="text" class="form-control" id="birthday" placeholder="XX/XX/XXXX">
-            <div class="mb-3 form-check">
-            <input type="checkbox" class="form-check-input" id="brandy">
-            <label class="form-check-label" for="brandy">brandy</label>
-            </div>
-            <div class="mb-3 form-check">
-                <input type="checkbox" class="form-check-input" id="vodka">
-                <label class="form-check-label" for="vodka">vodka</label>
-                </div>
+    <div class="mb-3">
+        <label for="birthday" class="form-label">Your Birthday</label>
+            <input type="date" id="birthday" name="birthday">
+    <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="brandy">
+        <label class="form-check-label" for="brandy">brandy</label>
+    </div>
+     <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="vodka">
+        <label class="form-check-label" for="vodka">vodka</label>
+    </div>
+    <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="whiskey">
+        <label class="form-check-label" for="whiskey">whiskey</label>
+     </div>
+    <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="gin">
+        <label class="form-check-label" for="gin">gin</label>
+    </div>
+    <div class="mb-3 form-check">
+         <input type="checkbox" class="form-check-input" id="tequila">
+        <label class="form-check-label" for="tequila">tequila</label>
+     </div>
+    <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="rum">
+        <label class="form-check-label" for="rum"></label>
+    </div>
             <button class="btn btn-primary" id="start">Submit</button>
 
         <!--image, name of card, high level descrp., detailed descrp on back ie four p tags-->
         <!--five card options, present three to user-->
         <div class="container">
             <div id="card-one" class="row hidden">
-                <div class="card col-6">
+                <div class="card col-1-of-3">
                     <div class="card-body" id = "card-one">
                     <h5 class="card-title" id="first-card-title">Card title</h5>
                     <img src="" id="card-one-pic">
@@ -47,14 +70,14 @@
                     <a href="#" class="btn btn-primary">READ</a>
                     </div>
                 </div>
-                <div class="card col-6">
+                <div class="card col-1-of-3">
                     <div class="card-body" id = "card-one">
                     <p class="card-text" id="first-card-desc">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     </div>
                 </div>
             </div>
             <div id="card-two" class="row hidden">
-                <div class="card col-6">
+                <div class="card col-1-of-3">
                     <div class="card-body" id = "card-two">
                     <h5 class="card-title" id="second-card-title">Card title</h5>
                     <img src="" id="card-two-pic">
@@ -62,14 +85,14 @@
                     <a href="#" class="btn btn-primary">READ</a>
                     </div>
                 </div>
-                <div class="card col-6">
+                <div class="card col-1-of-3">
                     <div class="card-body" id = "card-two">
                     <p class="card-text" id="second-card-desc">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     </div>
                 </div>
             </div>
             <div id="card-three" class="row hidden">
-                <div class="card col-6">
+                <div class="card col-1-of-3">
                     <div class="card-body" id = "card-three">
                     <h5 class="card-title" id="third-card-title">Card title</h5>
                     <img src="" id="card-three-pic">
@@ -77,7 +100,7 @@
                     <a href="#" class="btn btn-primary">READ</a>
                     </div>
                 </div>
-                <div class="card col-6">
+                <div class="card col-1-of-3">
                     <div class="card-body" id = "card-three">
                     <p class="card-text" id="third-card-desc">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     </div>
