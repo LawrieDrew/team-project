@@ -2,127 +2,150 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
-   <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Macondo+Swash+Caps&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="assets/style.css">
     
-
     <title>Tipsy Tarot</title>
-
 </head>
-
 <body>
-<!--on click btn "enter birthday" on landing page with FT Woman/text input-->
-<!--moment: what liquor do you have?/text input/multi-select(brandy, vodka, gin, rum, tequila, whiskey-->
-<!--Begin btn (submit)-->
-
-<header class="header">
-    <div class="main-box">
-        <h1 class="heading-primary">Tipsy Tarot</h1>
-        <a href="#" id="drink" class="btn btn-main">Let's Drink</a>
-    </div>
-
-<!--on landing page, two models, one with birthday input and one multi select for liquor-->
-<!--return value of less than or more than 21 "Stars Align/Do Not Align"-->
-    <div class="row">
-    <div class="mb-3">
-        <label for="birthday" class="form-label">Your Birthday</label>
-            <input type="date" id="birthday" name="birthday">
-    <div class="mb-3 form-check">
-        <input type="checkbox" class="form-check-input" id="brandy">
-        <label class="form-check-label" for="brandy">brandy</label>
-    </div>
-     <div class="mb-3 form-check">
-        <input type="checkbox" class="form-check-input" id="vodka">
-        <label class="form-check-label" for="vodka">vodka</label>
-    </div>
-    <div class="mb-3 form-check">
-        <input type="checkbox" class="form-check-input" id="whiskey">
-        <label class="form-check-label" for="whiskey">whiskey</label>
-     </div>
-    <div class="mb-3 form-check">
-        <input type="checkbox" class="form-check-input" id="gin">
-        <label class="form-check-label" for="gin">gin</label>
-    </div>
-    <div class="mb-3 form-check">
-         <input type="checkbox" class="form-check-input" id="tequila">
-        <label class="form-check-label" for="tequila">tequila</label>
-     </div>
-    <div class="mb-3 form-check">
-        <input type="checkbox" class="form-check-input" id="rum">
-        <label class="form-check-label" for="rum"></label>
-    </div>
-            <button class="btn btn-primary" id="start">Submit</button>
-
-        <!--image, name of card, high level descrp., detailed descrp on back ie four p tags-->
-        <!--five card options, present three to user-->
-        <div class="container">
-            <div id="card-one" class="row hidden">
-                <div class="card col-1-of-3">
-                    <div class="card-body" id = "card-one">
-                    <h5 class="card-title" id="first-card-title">Card title</h5>
-                    <img src="" id="card-one-pic">
-                    <p class="card-text" id="first-card-meaning_up">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">READ</a>
-                    </div>
-                </div>
-                <div class="card col-1-of-3">
-                    <div class="card-body" id = "card-one">
-                    <p class="card-text" id="first-card-desc">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                </div>
-            </div>
-            <div id="card-two" class="row hidden">
-                <div class="card col-1-of-3">
-                    <div class="card-body" id = "card-two">
-                    <h5 class="card-title" id="second-card-title">Card title</h5>
-                    <img src="" id="card-two-pic">
-                    <p class="card-text" id="second-card-meaning_up">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">READ</a>
-                    </div>
-                </div>
-                <div class="card col-1-of-3">
-                    <div class="card-body" id = "card-two">
-                    <p class="card-text" id="second-card-desc">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                </div>
-            </div>
-            <div id="card-three" class="row hidden">
-                <div class="card col-1-of-3">
-                    <div class="card-body" id = "card-three">
-                    <h5 class="card-title" id="third-card-title">Card title</h5>
-                    <img src="" id="card-three-pic">
-                    <p class="card-text" id="third-card-meaning_up">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">READ</a>
-                    </div>
-                </div>
-                <div class="card col-1-of-3">
-                    <div class="card-body" id = "card-three">
-                    <p class="card-text" id="third-card-desc">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                </div>
-            </div>
+    <header class="header">
+        <div class="main-box">
+            <h1 class="heading-primary">Tipsy Tarot</h1>
+            <button onclick="myFunction()" id="drink" class="btn btn-main">Let's Drink &rarr;</button> 
+            <!-- <a href="#" id="drink" class="btn btn-main">Let's Drink</a> -->
         </div>
-    </div>
+        <div id="myDIV">
+            <label for="birthday" class="form-label">Your Birthday</label>
+            <input type="date" id="birthday" name="birthday">        
+        <label class="checkbox" for="brandy">brandy</label>
+            <input type="checkbox" class="form-check-input" id="brandy">
         
+        <label class="checkbox" for="vodka">vodka</label>
+            <input type="checkbox" class="form-check-input" id="vodka">
+            
+        <label class="checkbox" for="whiskey">whiskey</label>
+            <input type="checkbox" class="form-check-input" id="whiskey">
+        
+        <label class="checkbox" for="gin">gin</label>
+            <input type="checkbox" class="form-check-input" id="gin">
+        
+        <label class="checkbox" for="tequila">tequila</label>
+            <input type="checkbox" class="form-check-input" id="tequila">
+        
+        <label class="form-check-label" for="rum">Rum</label>
+            <input type="checkbox" class="form-check-input" id="rum">
+        
+            <button class="btn btn-primary" id="start">Submit</button>
+        </div>
+    </header>
+
+    <section class="tarot-cards">
+        <div>
+            <h2 class="heading-secondary">Tarot Reading</h2>
+        </div>
+        <div class="container">
+        <div class="scene scene--card">
+            <div class="card">
+              <div class="card__face card__face--front">
+                <img src="img/TheEmperor.PNG" id="card-one-pic">
+              </div>
+              <div class="card__face card__face--back">
+                <h5 class="card-title" id="first-card-title">Card title</h5>
+                <p class="text" id="first-card-desc">Some quick example text to build on the card.</p>
+              </div>
+            </div>
+          </div>
+          <div class="scene scene--card">
+            <div class="card">
+              <div class="card__face card__face--front">
+                <img src="img/TheEmperor.PNG" id="card-two-pic">
+              </div>
+              <div class="card__face card__face--back">
+                <h5 class="card-title" id="second-card-title">Card title</h5>
+                <p class="text" id="second-card-desc">Some quick example text to build on the card.</p>
+              </div>
+            </div>
+          </div>
+          <div class="scene scene--card">
+            <div class="card">
+              <div class="card__face card__face--front">
+                <img src="img/TheEmperor.PNG" id="card-three-pic">
+              </div>
+              <div class="card__face card__face--back">
+                <h5 class="card-title" id="third-card-title">Card title</h5>
+                <p class="text" id="third-card-desc">Some quick example text to build on the card.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <section class="cocktail-cards">
+      <div>
+          <h2 class="heading-secondary">The Cards have Spoken, Here Are Your Cocktails!</h2>
+      </div>
+      <div class="container">
+      <div class="scene scene--card">
+          <div class="card">
+            <div class="card__face card__face--front">
+              <h5 class="card-title" id="cocktail-name">Indepence Spice</h5>
+              <h6 class="card-title">Ingretients</h6>
+              <p class="text" id="ingredients">Some quick example <br> text to build <br> on the card.</p>
+              <!-- <img src="" id="card-one-pic"> -->
+            </div>
+            <div class="card__face card__face--back">
+              <h6 class="card-title">Directions</h6>
+              <p class="text" id="directions">Some quick example text to build on the card.</p>
+            </div>
+          </div>
+        </div>
+        <div class="scene scene--card">
+          <div class="card">
+            <div class="card__face card__face--front">
+              <h5 class="card-title" id="cocktail-name"></h5>
+              <h6 class="card-title">Ingretients</h6>
+              <p class="text" id="ingredients">Some quick example  text to build on the card.</p>
+              <img src="" id="cocktail-one-pic">
+            </div>
+            <div class="card__face card__face--back">
+              <p class="text" id="instructions">Some quick example text to build on the card.</p>
+            </div>
+          </div>
+        </div>
+        <div class="scene scene--card">
+          <div class="card">
+            <div class="card__face card__face--front">
+              <h5 class="card-title" id="cocktail-name">Card Title</h5>
+              <p class="text" id="ingredients">Some quick example text to build on the card.</p>
+              <img src="" id="card-one-pic">
+            </div>
+            <div class="card__face card__face--back">
+              <p class="text" id="directions">Some quick example text to build on the card.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
 
 
+    <script>
+        function myFunction() {
+        var x = document.getElementById("myDIV");
+        if (x.style.display === "none") {
+        x.style.display = "block";
+        } else {
+         x.style.display = "none";
+            }
+        }
 
-
-
-
-
-
-
-    
-    <script src="script.js"></script>
-    <script src=""></script>
-    <script src=""></script>
-
+        var card = document.querySelector('.card');
+        card.addEventListener( 'click', function() {
+        card.classList.toggle('is-flipped');
+        console.log('click')
+        });
+    </script>
+       
 </body>
-
 </html>
