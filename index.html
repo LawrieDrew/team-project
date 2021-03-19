@@ -23,36 +23,36 @@
                 <div id="check">
                     <div class="userBirth">
                         <label for="birthday" class="form-label">Your Birthday</label>
-                        <input type="date" id="birthday" name="birthday"> 
+                        <input type="date" id="birthday" name="birthday" class="birthInput"> 
                     </div> 
                     <div> 
                         <label class="checkbox" for="brandy">brandy</label>
-                        <input type="checkbox" class="form-check-input" id="brandy">
+                        <input type="checkbox" class="form-check-input input" id="brandy">
                     </div>     
 
                     <div>
                         <label class="checkbox" for="vodka">vodka</label>
-                        <input type="checkbox" class="form-check-input" id="vodka">
+                        <input type="checkbox" id="vodka" class="form-check-input input">
                     </div>
                     
                     <div>
                         <label class="checkbox" for="whiskey">whiskey</label>
-                        <input type="checkbox" class="form-check-input" id="whiskey">
+                        <input type="checkbox" class="form-check-input input" id="whiskey">
                     </div>
 
                     <div>
                         <label class="checkbox" for="gin">gin</label>
-                        <input type="checkbox" class="form-check-input" id="gin">
+                        <input type="checkbox" class="form-check-input input" id="gin">
                     </div>
 
                     <div>
                         <label class="checkbox" for="tequila">tequila</label>
-                        <input type="checkbox" class="form-check-input" id="tequila">
+                        <input type="checkbox" class="form-check-input input" id="tequila">
                     </div>
 
                     <div>
                         <label class="form-check-label" for="rum">rum</label>
-                        <input type="checkbox" class="form-check-input" id="rum">
+                        <input type="checkbox" class="form-check-input input" id="rum">
                     </div>
 
                     <div>
@@ -80,7 +80,7 @@
                     <!-- Back of card -->
                     <div class="card__face card__face--back">
                         <h2 class="card-title" id="first-card-title">Card title</h2>
-                        <p class="text" id="first-card-meaning_up">Some quick example text to build on the card.</p>
+                        <h3 class="text" id="first-card-meaning_up">Some quick example text to build on the card.</h3>
                         <button id ="card-one-button" class="select-btn">Select</button>
                     </div>
                 </div>
@@ -93,8 +93,8 @@
                 <img src="" id="card-two-pic">
               </div>
               <div class="card__face card__face--back">
-                <h5 class="card-title" id="second-card-title">Card title</h5>
-                <p class="text" id="second-card-desc">Some quick example text to build on the card.</p>
+                <h2 class="card-title" id="second-card-title">Card title</h2>
+                <h3 class="text" id="second-card-meaning_up">Some quick example text to build on the card.</h3>
                 <button id ="card-two-button" class="select-btn">Select</button>
               </div>
             </div>
@@ -107,8 +107,8 @@
                 <img src="" id="card-three-pic">
               </div>
               <div class="card__face card__face--back">
-                <h5 class="card-title" id="third-card-title">Card title</h5>
-                <p class="text" id="third-card-desc">Some quick example text to build on the card.</p>
+                <h2 class="card-title" id="third-card-title">Card title</h2>
+                <h3 class="text" id="third-card-meaning_up">Some quick example text to build on the card.</h3>
                 <button id ="card-three-button" class="select-btn">Select</button>
               </div>
             </div>
@@ -122,42 +122,45 @@
           <h2 class="heading-secondary">The Cards have Spoken, Here Are Your Cocktails!</h2>
       </div>
       <div class="container">
+      <!-- Cocktail card one -->
       <div class="scene scene--card">
-          <div class="card">
+          <div class="card" id="cocktail-one">
             <div class="card__face card__face--front">
-              <h5 class="card-title" id="cocktail-name">Indepence Spice</h5>
-              <h6 class="card-title">Ingretients</h6>
-              <p class="text" id="ingredients">Some quick example <br> text to build <br> on the card.</p>
-              <!-- <img src="" id="card-one-pic"> -->
+              <h1 class="card-title" id="cocktail-name-one">Indepence Spice</h1>
+              <h2 class="card-title">Ingredients</h2>
+              <p class="text" id="ingredients-one">Some quick example <br> text to build <br> on the card.</p>
             </div>
             <div class="card__face card__face--back">
-              <h6 class="card-title">Directions</h6>
-              <p class="text" id="directions">Some quick example text to build on the card.</p>
+              <h2 class="card-title">Directions</h2>
+              <p class="text" id="directions-one">Some quick example text to build on the card.</p>
             </div>
           </div>
         </div>
+        <!-- Cocktail card two -->
         <div class="scene scene--card">
-          <div class="card">
-            <div class="card__face card__face--front">
-              <h5 class="card-title" id="cocktail-name"></h5>
-              <h6 class="card-title">Ingretients</h6>
-              <p class="text" id="ingredients">Some quick example  text to build on the card.</p>
-              <img src="" id="cocktail-one-pic">
+            <div class="card" id="cocktail-two">
+              <div class="card__face card__face--front">
+                <h1 class="card-title" id="cocktail-name-two">Card Title</h1>
+                <h2 class="card-title">Ingredients</h2>
+                <p class="text" id="ingredients-two">Some quick example  text to build on the card.</p>
+              </div>
+              <div class="card__face card__face--back">
+                <h2 class="card-title">Directions</h2>
+                <p class="text" id="directions-two">Some quick example text to build on the card.</p>
+              </div>
             </div>
-            <div class="card__face card__face--back">
-              <p class="text" id="instructions">Some quick example text to build on the card.</p>
-            </div>
-          </div>
         </div>
+        <!-- Cocktail card three -->
         <div class="scene scene--card">
-          <div class="card">
+          <div class="card" id="cocktail-three">
             <div class="card__face card__face--front">
-              <h5 class="card-title" id="cocktail-name">Card Title</h5>
-              <p class="text" id="ingredients">Some quick example text to build on the card.</p>
-              <img src="" id="card-one-pic">
+              <h1 class="card-title" id="cocktail-name-three">Card Title</h1>
+              <h2 class="card-title">Ingredients</h2>
+              <p class="text" id="ingredients-three">Some quick example text to build on the card.</p>
             </div>
             <div class="card__face card__face--back">
-              <p class="text" id="directions">Some quick example text to build on the card.</p>
+              <h2 class="card-title">Directions</h2>
+              <p class="text" id="directions-three">Some quick example text to build on the card.</p>
             </div>
           </div>
         </div>
@@ -172,7 +175,9 @@
     <script>
         function myFunction() {
             var x = document.getElementById("myDIV");
+            var btn = document.getElementById("drink")
             x.classList.remove("hidden")
+            btn.classList.add("hidden")
         }
 
         var cardOne = document.getElementById('card-one');
@@ -190,6 +195,24 @@
         var cardThree = document.getElementById('card-three');
         cardThree.addEventListener( 'click', function() {
         cardThree.classList.toggle('is-flipped');
+        console.log('click')
+        });
+
+        var cocktailCardOne = document.getElementById('cocktail-one');
+        cocktailCardOne.addEventListener( 'click', function() {
+        cocktailCardOne.classList.toggle('is-flipped');
+        console.log('click')
+        });
+
+        var cocktailCardTwo = document.getElementById('cocktail-two');
+        cocktailCardTwo.addEventListener( 'click', function() {
+        cocktailCardTwo.classList.toggle('is-flipped');
+        console.log('click')
+        });
+
+        var cocktailCardThree = document.getElementById('cocktail-three');
+        cocktailCardThree.addEventListener( 'click', function() {
+        cocktailCardThree.classList.toggle('is-flipped');
         console.log('click')
         });
 

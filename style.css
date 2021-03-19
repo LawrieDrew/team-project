@@ -19,6 +19,11 @@ p {
     font-size: 2.5rem;
 }
 
+img{
+    width: 100%;
+    border-radius: 5%;
+}
+
 .main-box {
     position: absolute;
     top: 65%;
@@ -133,12 +138,16 @@ p {
   
   .card__face--front {
     background: rgb(171, 84, 230);
+    border-radius: 5%;
   }
   
   .card__face--back {
     /* background: ; */
     background-image: linear-gradient(315deg, #e056fd 0%, #000000 74%);
     transform: rotateY(180deg);
+    border-radius: 5%;
+    padding: 1rem;
+
   }
 
   .hidden {

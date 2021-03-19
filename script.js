@@ -11,6 +11,9 @@ var card = document.querySelectorAll('.card');
 var cardOne = document.getElementById('card-one');
 var cardTwo = document.getElementById('card-two');
 var cardThree = document.getElementById('card-three');
+var myDIV = document.getElementById('myDIV');
+var titleText = document.querySelector(".heading-primary")
+
 //Variables to target hiding and unhiding sections
 var tarotCards = document.getElementById('tarot-cards');
 var cocktailCards = document.getElementById('cocktail-cards');
@@ -22,15 +25,37 @@ var cardOneMeaningUp = document.getElementById('first-card-meaning_up');
 var cardOnePic = document.getElementById('card-one-pic');
 var cardOneSelect = document.getElementById('card-one-button');
 
+//card tarot card two
 var cardTwoTitle = document.getElementById('second-card-title');
-var cardTwoDesc = document.getElementById('second-card-desc');
 var cardTwoMeaningUp = document.getElementById('second-card-meaning_up');
 var cardTwoPic = document.getElementById('card-two-pic');
+var cardTwoSelect = document.getElementById('card-two-button')
+
+//card tarot card three
 var cardThreeTitle = document.getElementById('third-card-title');
-var cardThreeDesc = document.getElementById('third-card-desc');
 var cardThreeMeaningUp = document.getElementById('third-card-meaning_up');
 var cardThreePic = document.getElementById('card-three-pic');
+var cardThreeSelect = document.getElementById('card-three-button');
+
+
+//card cocktail one
+var cocktailNameOne = document.getElementById('cocktail-name-one');
+var cocktailIngredientsOne = document.getElementById('ingredients-one');
+var cocktailDirectionsOne = document.getElementById('directions-one');
+
+//card cocktail two
+var cocktailNameTwo = document.getElementById('cocktail-name-two');
+var cocktailIngredientsTwo = document.getElementById('ingredients-two');
+var cocktailDirectionsTwo = document.getElementById('directions-two');
+
+//card cocktail two
+var cocktailNameThree = document.getElementById('cocktail-name-three');
+var cocktailIngredientsThree = document.getElementById('ingredients-three');
+var cocktailDirectionsThree = document.getElementById('directions-three');
+
+//buttons
 var startBtn = document.getElementById('start');//variable to grab the start button
+var restartBtn = document.getElementById('restartButton'); //variable to restart at end
 
 //variables for updated card info
 var cardThreeTitleText;
@@ -57,28 +82,51 @@ var userArray = []; //where the 3 randomized cards live
 currentDate = moment().format("MM/DD/YYYY");
 console.log(currentDate);
 
+//variables for birthday
 var DOBInput = document.querySelector("#birthday");
 
+//button handler function 
 
+let input = document.querySelectorAll(".input");
+let birthInput = document.querySelector(".birthInput");
+
+
+startBtn.disabled = true; //setting button state to disabled
+
+input.forEach(function(elem) {
+    elem.addEventListener("change", stateHandle)
+})
+
+function stateHandle() { //checks for user inputs before allowing the user to continue
+  if (((brandyBox.value === "") || (vodkaBox.value === "") || (whiskeyBox.value === "") || (ginBox.value === "") || (tequilaBox.value === "") || (rumBox.value === "")) && (document.querySelector(".birthInput").value === "")) {
+    startBtn.disabled = true; //button remains disabled
+  } else {
+    startBtn.disabled = false; //button is enabled
+  }
+}
+
+restartBtn.addEventListener('click', function(){
+    location.reload()
+})
 
 //on click run function to generate tarot cards
 startBtn.addEventListener('click', function(){
-
     var userBirthday = DOBInput.value
     console.log(userBirthday);
     var birthday = moment(userBirthday).format("MM/DD/YYYY");
     console.log(birthday)
 
-    //hiding and unhiding sections
-    mainPage.classList.add("hidden")
-    tarotCards.classList.remove("hidden");
-
-
    // if statement for birthday
    if ((moment(currentDate).diff(moment(birthday), "years") < 21)) {
     console.log("too young!");
+    myDIV.classList.add("hidden")
+    titleText.innerText = "Too young!"
     return
     }
+
+    //hiding and unhiding sections
+        mainPage.classList.add("hidden")
+        tarotCards.classList.remove("hidden");
 
     //if statement to check for user input values and creates custom user array
     if (brandyBox.checked) { //run if statement to check for "checks" for each alcohol type
@@ -108,7 +156,7 @@ startBtn.addEventListener('click', function(){
     }
 
     console.log(userArray)
-    //fetching the Tarot Cards API
+    //fetching the Tarot Cards API 
     fetch('https://rws-cards-api.herokuapp.com/api/v1/cards')
     .then(response => response.json())
     .then(cards => {
@@ -135,11 +183,9 @@ startBtn.addEventListener('click', function(){
         cardOnePic.src = pngOne;
         cardOne.classList.add(cardOnePicTitle);
 
-        //card two 
+        //card two
         cardTwoTitleText = resultsArray[1]['name'];
         console.log(cardTwoTitleText);
-        var cardTwoDescText = resultsArray[1]['desc'];
-        console.log(cardTwoDescText);
         var cardTwoMeaningUpText = resultsArray[1]['meaning_up'];
         console.log(cardTwoMeaningUpText);
         var cardTwoPicTitle = cardTwoTitleText.split(" ").join("")//Removes spaces from title to format for jpeg
@@ -147,27 +193,24 @@ startBtn.addEventListener('click', function(){
         console.log(pngTwo)
 
         cardTwoTitle.innerText = cardTwoTitleText;
-        cardTwoDesc.innerText = cardTwoDescText;
         cardTwoMeaningUp.innerText = cardTwoMeaningUpText;
-        cardTwoPic.src=pngTwo
+        cardTwoPic.src = pngTwo;
         cardTwo.classList.add(cardTwoPicTitle);
+
     
 
-        //card three
+        //card three NEIL HELP HERE TOOOOOOO
         cardThreeTitleText = resultsArray[2]['name'];
         console.log(cardThreeTitleText);
-        var cardThreeDescText = resultsArray[2]['desc'];
-        console.log(cardThreeDescText);
         var cardThreeMeaningUpText = resultsArray[2]['meaning_up'];
         console.log(cardThreeMeaningUpText);
         var cardThreePicTitle = cardThreeTitleText.split(" ").join("")//Removes spaces from title to format for jpeg
         var pngThree = "assets/"+cardThreePicTitle + ".PNG";
-        console.log(pngThree)
+        console.log(pngTwo)
 
         cardThreeTitle.innerText = cardThreeTitleText;
-        cardThreeDesc.innerText = cardThreeDescText;
         cardThreeMeaningUp.innerText = cardThreeMeaningUpText;
-        cardThreePic.src=pngThree
+        cardThreePic.src = pngThree;
         cardThree.classList.add(cardThreePicTitle);
 
         cardOne.classList.remove("hidden");
@@ -232,9 +275,30 @@ startBtn.addEventListener('click', function(){
             drinksFiltered.push(options)
         }
         console.log(drinksFiltered)
+        cocktailNameOne = drinksFiltered[0]['strDrink'];
+        console.log(cocktailNameOne)
+        var searchNameOne = cocktailNameOne.split(" ").join("%")
+        console.log(searchNameOne)
+
+        cardOneTitle.innerText = cocktailNameOne;
+
+        fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s='+searchNameOne)//changes based on user's choice of cocktail
+        .then(response => response.json())
+        .then(cocktailDetails => {
+            console.log(cocktailDetails);
+            cocktailArray = cocktailDetails['drinks'];
+            console.log(cocktailArray)
+            var ingredient1 = cocktailArray[0]['strIngredient1']
+        
+            console.log(ingredient1)
+            cocktailIngredientsOne.innerText = ingredient1
+        })
+
     })
 })
-    cardTwo.addEventListener('click', function(){
+    cardTwoSelect.addEventListener('click', function(){
+        tarotCards.classList.add("hidden")
+        cocktailCards.classList.remove("hidden");
         if (cardOne.classList.contains("TheHierophant")){ //will need an else if statement for each card Name and add to card One Two and Three
             alcohol="brandy"
         }   else if (cardOne.classList.contains("Justice")){
@@ -285,7 +349,9 @@ startBtn.addEventListener('click', function(){
             console.log(drinksFiltered)
         })
     })
-    cardThree.addEventListener('click', function(){
+    cardThreeSelect.addEventListener('click', function(){
+        tarotCards.classList.add("hidden")
+        cocktailCards.classList.remove("hidden");
         if (cardOne.classList.contains("TheHierophant")){ //will need an else if statement for each card Name and add to card One Two and Three
             alcohol="brandy"
         }   else if (cardOne.classList.contains("Justice")){
