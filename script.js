@@ -69,7 +69,7 @@ var vodkaArray = [{name:"The Emperor"}, {name:"The Empress"}, {name:"Wheel Of Fo
 var tequilaArray = [{name:"The Devil"}, {name:"The Lovers"}, {name:"The Tower"}]
 var ginArray = [{name:"The Chariot"}, {name:"The Hermit"}, {name:"Temperance"}]
 var rumArray = [{name:"The Magician"}, {name:"The High Priestess"}, {name:"The Star"}]
-var whiskeyArray = [{name:"The Hanged Man"}, {name:"Death"}, {name:"Fortitude"}]
+var whiskeyArray = [{name:"The Hanged Man"}, {name:"Death"}, {name:"The Last Judgment"}]
 
 var alcoholChoice=[]; //variable to hold all alcohol associated with card
 var drinksFiltered=[];//variable to hold the randomly selected drinks
@@ -182,6 +182,9 @@ startBtn.addEventListener('click', function(){
         console.log(cardStartArray)
 
         let resultsArray = cardStartArray.filter(o1 => userArray.some(o2 => o1.name === o2.name)); //filters API large array to only include the cards with name values matching those in the custom user array
+
+        var resultsArrayString = JSON.stringify(resultsArray)
+        localStorage.setItem("tarot cards", resultsArrayString) //sets tarot card array to local storage
         
         console.log(resultsArray);
         
@@ -257,7 +260,7 @@ startBtn.addEventListener('click', function(){
                 alcohol="whiskey"
             }   else if (cardOne.classList.contains("Death")){
                 alcohol="whiskey"
-            }   else if (cardOne.classList.contains("Fortitude")){
+            }   else if (cardOne.classList.contains("TheLastJudgment")){
                 alcohol="whiskey"
             }   else if (cardOne.classList.contains("TheDevil")){
                 alcohol="tequila"
@@ -430,7 +433,7 @@ startBtn.addEventListener('click', function(){
                 alcohol="whiskey"
             }   else if (cardOne.classList.contains("Death")){
                 alcohol="whiskey"
-            }   else if (cardOne.classList.contains("Fortitude")){
+            }   else if (cardOne.classList.contains("TheLastJudgment")){
                 alcohol="whiskey"
             }   else if (cardOne.classList.contains("TheDevil")){
                 alcohol="tequila"
@@ -602,7 +605,7 @@ startBtn.addEventListener('click', function(){
                 alcohol="whiskey"
             }   else if (cardOne.classList.contains("Death")){
                 alcohol="whiskey"
-            }   else if (cardOne.classList.contains("Fortitude")){
+            }   else if (cardOne.classList.contains("TheLastJudegment")){
                 alcohol="whiskey"
             }   else if (cardOne.classList.contains("TheDevil")){
                 alcohol="tequila"
