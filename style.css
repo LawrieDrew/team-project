@@ -29,7 +29,7 @@ img{
 
 }
 
-.main-box {
+.main-box  {
     position: absolute;
     top: 65%;
     left: 70%;
@@ -104,6 +104,7 @@ img{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 .text {
@@ -169,3 +170,41 @@ img{
       font-size: 2.5rem;
       justify-content: space-between;
   }
+
+  #restartButton{
+      display: block;
+      position: absolute;
+      top: 90%;
+      left: 85%
+  }
+
+  @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    /* Styles */
+    .container {
+        display: flex;
+        flex-direction: column;
+        vertical-align: center;
+        margin-left: 18px;
+    }
+    .heading-primary, .btn-main {
+        position: relative;
+        text-align: center;
+        right: 50%;
+        bottom: 50%;
+    }
+}
+    @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+        /* Styles */
+        .container {
+            display: flex;
+            flex-direction: column;
+            vertical-align: center;
+            margin-left: 18px;
+        }
+        .heading-primary, .btn-main {
+            position: relative;
+            text-align: center;
+            right: 50%;
+            bottom: 50%;
+        }
+    }
