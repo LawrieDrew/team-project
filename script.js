@@ -183,7 +183,7 @@ startBtn.addEventListener('click', function(){
 
         let resultsArray = cardStartArray.filter(o1 => userArray.some(o2 => o1.name === o2.name)); //filters API large array to only include the cards with name values matching those in the custom user array
 
-        var resultsArrayString = JSON.stringify(resultsArray)
+        var resultsArrayString = JSON.stringify(resultsArray)//stringifying to save to local storage
         localStorage.setItem("tarot cards", resultsArrayString) //sets tarot card array to local storage
         
         console.log(resultsArray);
@@ -319,15 +319,19 @@ startBtn.addEventListener('click', function(){
                     ingredientsArray.push(ingredient1, ingredient2, ingredient3, ingredient4, ingredient5, ingredient6);
                     console.log(ingredientsArray);
 
-                    filter_array(ingredientsArray);///TRYING TO REMOVE NULL VALUES
-                    console.log(ingredientsArray);
+                    var filtered = ingredientsArray.filter(function (el) {
+                        return el != null;
+                      });
+                      
+                    console.log(filtered);
                     //amends ingredients to card
                     text = "<ul>";
-                    for (i = 0; i < ingredientsArray.length; i++) {
-                            text += "<li>" + ingredientsArray[i] + "</li>";
+                    for (i = 0; i < filtered.length; i++) {
+                            text += "<li>" + filtered[i] + "</li>";
                         }
-                        
+                    
                     text += "</ul>";
+                    
                     document.getElementById("ingredients-Card-One").innerHTML = text;
                     cocktailDirectionsOne.innerText = directions;
             })
@@ -359,13 +363,19 @@ startBtn.addEventListener('click', function(){
                 ingredientsArray.push(ingredient1, ingredient2, ingredient3, ingredient4, ingredient5, ingredient6);
                 console.log(ingredientsArray);
 
-                filter_array(ingredientsArray);///TRYING TO REMOVE NULL VALUES
+               
                 console.log(ingredientsArray);
-                //amends ingredients to card
-                text = "<ul>";
-                for (i = 0; i < ingredientsArray.length; i++) {
-                        text += "<li>" + ingredientsArray[i] + "</li>";
-                    }
+
+                var filtered = ingredientsArray.filter(function (el) {
+                        return el != null;
+                      });
+                      
+                    console.log(filtered);
+                    //amends ingredients to card
+                    text = "<ul>";
+                    for (i = 0; i < filtered.length; i++) {
+                            text += "<li>" + filtered[i] + "</li>";
+                        }
                     
                 text += "</ul>";
                 document.getElementById("ingredients-Card-Two").innerHTML = text;
@@ -399,14 +409,18 @@ startBtn.addEventListener('click', function(){
                 ingredientsArray.push(ingredient1, ingredient2, ingredient3, ingredient4, ingredient5, ingredient6);
                 console.log(ingredientsArray);
 
-                filter_array(ingredientsArray);///TRYING TO REMOVE NULL VALUES
-                console.log(ingredientsArray);
+            
+                var filtered = ingredientsArray.filter(function (el) {
+                    return el != null;
+                  });
+                  
+                console.log(filtered);
                 //amends ingredients to card
                 text = "<ul>";
-                for (i = 0; i < ingredientsArray.length; i++) {
-                        text += "<li>" + ingredientsArray[i] + "</li>";
+                for (i = 0; i < filtered.length; i++) {
+                        text += "<li>" + filtered[i] + "</li>";
                     }
-                    
+
                 text += "</ul>";
                 document.getElementById("ingredients-Card-Three").innerHTML = text;
                 cocktailDirectionsThree.innerText = directions3;
@@ -492,12 +506,16 @@ startBtn.addEventListener('click', function(){
                 ingredientsArray.push(ingredient1, ingredient2, ingredient3, ingredient4, ingredient5, ingredient6);
                 console.log(ingredientsArray);
 
-                filter_array(ingredientsArray);///TRYING TO REMOVE NULL VALUES
-                console.log(ingredientsArray);
+               
+                var filtered = ingredientsArray.filter(function (el) {
+                    return el != null;
+                  });
+                  
+                console.log(filtered);
                 //amends ingredients to card
                 text = "<ul>";
-                for (i = 0; i < ingredientsArray.length; i++) {
-                        text += "<li>" + ingredientsArray[i] + "</li>";
+                for (i = 0; i < filtered.length; i++) {
+                        text += "<li>" + filtered[i] + "</li>";
                     }
                     
                 text += "</ul>";
@@ -532,12 +550,15 @@ startBtn.addEventListener('click', function(){
                 ingredientsArray.push(ingredient1, ingredient2, ingredient3, ingredient4, ingredient5, ingredient6);
                 console.log(ingredientsArray);
 
-                filter_array(ingredientsArray);///TRYING TO REMOVE NULL VALUES
-                console.log(ingredientsArray);
+                var filtered = ingredientsArray.filter(function (el) {
+                    return el != null;
+                  });
+                  
+                console.log(filtered);
                 //amends ingredients to card
                 text = "<ul>";
-                for (i = 0; i < ingredientsArray.length; i++) {
-                        text += "<li>" + ingredientsArray[i] + "</li>";
+                for (i = 0; i < filtered.length; i++) {
+                        text += "<li>" + filtered[i] + "</li>";
                     }
                     
                 text += "</ul>";
@@ -572,12 +593,15 @@ startBtn.addEventListener('click', function(){
                 ingredientsArray.push(ingredient1, ingredient2, ingredient3, ingredient4, ingredient5, ingredient6);
                 console.log(ingredientsArray);
 
-                filter_array(ingredientsArray);///TRYING TO REMOVE NULL VALUES
-                console.log(ingredientsArray);
+                var filtered = ingredientsArray.filter(function (el) {
+                    return el != null;
+                  });
+                  
+                console.log(filtered);
                 //amends ingredients to card
                 text = "<ul>";
-                for (i = 0; i < ingredientsArray.length; i++) {
-                        text += "<li>" + ingredientsArray[i] + "</li>";
+                for (i = 0; i < filtered.length; i++) {
+                        text += "<li>" + filtered[i] + "</li>";
                     }
                     
                 text += "</ul>";
@@ -666,12 +690,16 @@ startBtn.addEventListener('click', function(){
                     ingredientsArray.push(ingredient1, ingredient2, ingredient3, ingredient4, ingredient5, ingredient6);
                     console.log(ingredientsArray);
         
-                    filter_array(ingredientsArray);///TRYING TO REMOVE NULL VALUES
-                    console.log(ingredientsArray);
+                    
+                    var filtered = ingredientsArray.filter(function (el) {
+                        return el != null;
+                      });
+                      
+                    console.log(filtered);
                     //amends ingredients to card
                     text = "<ul>";
-                    for (i = 0; i < ingredientsArray.length; i++) {
-                            text += "<li>" + ingredientsArray[i] + "</li>";
+                    for (i = 0; i < filtered.length; i++) {
+                            text += "<li>" + filtered[i] + "</li>";
                         }
                         
                     text += "</ul>";
@@ -706,12 +734,15 @@ startBtn.addEventListener('click', function(){
                     ingredientsArray.push(ingredient1, ingredient2, ingredient3, ingredient4, ingredient5, ingredient6);
                     console.log(ingredientsArray);
         
-                    filter_array(ingredientsArray);///TRYING TO REMOVE NULL VALUES
-                    console.log(ingredientsArray);
+                    var filtered = ingredientsArray.filter(function (el) {
+                        return el != null;
+                      });
+                      
+                    console.log(filtered);
                     //amends ingredients to card
                     text = "<ul>";
-                    for (i = 0; i < ingredientsArray.length; i++) {
-                            text += "<li>" + ingredientsArray[i] + "</li>";
+                    for (i = 0; i < filtered.length; i++) {
+                            text += "<li>" + filtered[i] + "</li>";
                         }
                         
                     text += "</ul>";
@@ -745,12 +776,15 @@ startBtn.addEventListener('click', function(){
                 ingredientsArray.push(ingredient1, ingredient2, ingredient3, ingredient4, ingredient5, ingredient6);
                 console.log(ingredientsArray);
 
-                filter_array(ingredientsArray);///TRYING TO REMOVE NULL VALUES
-                console.log(ingredientsArray);
+                var filtered = ingredientsArray.filter(function (el) {
+                    return el != null;
+                  });
+                  
+                console.log(filtered);
                 //amends ingredients to card
                 text = "<ul>";
-                for (i = 0; i < ingredientsArray.length; i++) {
-                        text += "<li>" + ingredientsArray[i] + "</li>";
+                for (i = 0; i < filtered.length; i++) {
+                        text += "<li>" + filtered[i] + "</li>";
                     }
                     
                 text += "</ul>";
@@ -760,6 +794,7 @@ startBtn.addEventListener('click', function(){
 
         })
     })
+
 })
 
 
