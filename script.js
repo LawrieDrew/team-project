@@ -288,8 +288,10 @@ startBtn.addEventListener('click', function(){
             console.log(cocktailDetails);
             cocktailArray = cocktailDetails['drinks'];
             console.log(cocktailArray)
-            ingredients = cocktailArray[0]['strIngredient1']
-            console.log(ingredients)
+            var ingredient1 = cocktailArray[0]['strIngredient1']
+        
+            console.log(ingredient1)
+            cocktailIngredientsOne.innerText = ingredient1
         })
 
     })
