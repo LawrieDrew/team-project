@@ -11,6 +11,9 @@ var card = document.querySelectorAll('.card');
 var cardOne = document.getElementById('card-one');
 var cardTwo = document.getElementById('card-two');
 var cardThree = document.getElementById('card-three');
+var myDIV = document.getElementById('myDIV');
+var titleText = document.querySelector(".heading-primary")
+
 //Variables to target hiding and unhiding sections
 var tarotCards = document.getElementById('tarot-cards');
 var cocktailCards = document.getElementById('cocktail-cards');
@@ -22,15 +25,21 @@ var cardOneMeaningUp = document.getElementById('first-card-meaning_up');
 var cardOnePic = document.getElementById('card-one-pic');
 var cardOneSelect = document.getElementById('card-one-button');
 
+//card tarot card two
 var cardTwoTitle = document.getElementById('second-card-title');
 var cardTwoDesc = document.getElementById('second-card-desc');
 var cardTwoMeaningUp = document.getElementById('second-card-meaning_up');
 var cardTwoPic = document.getElementById('card-two-pic');
+
+//card tarot card three
 var cardThreeTitle = document.getElementById('third-card-title');
 var cardThreeDesc = document.getElementById('third-card-desc');
 var cardThreeMeaningUp = document.getElementById('third-card-meaning_up');
 var cardThreePic = document.getElementById('card-three-pic');
+
+//buttons
 var startBtn = document.getElementById('start');//variable to grab the start button
+var restartBtn = document.getElementById('restartButton'); //variable to restart at end
 
 //variables for updated card info
 var cardThreeTitleText;
@@ -57,28 +66,51 @@ var userArray = []; //where the 3 randomized cards live
 currentDate = moment().format("MM/DD/YYYY");
 console.log(currentDate);
 
+//variables for birthday
 var DOBInput = document.querySelector("#birthday");
 
+//button handler function 
 
+let input = document.querySelectorAll(".input");
+let birthInput = document.querySelector(".birthInput");
+
+
+startBtn.disabled = true; //setting button state to disabled
+
+input.forEach(function(elem) {
+    elem.addEventListener("change", stateHandle)
+})
+
+function stateHandle() { //checks for user inputs before allowing the user to continue
+  if (((brandyBox.value === "") || (vodkaBox.value === "") || (whiskeyBox.value === "") || (ginBox.value === "") || (tequilaBox.value === "") || (rumBox.value === "")) && (document.querySelector(".birthInput").value === "")) {
+    startBtn.disabled = true; //button remains disabled
+  } else {
+    startBtn.disabled = false; //button is enabled
+  }
+}
+
+restartBtn.addEventListener('click', function(){
+    location.reload()
+})
 
 //on click run function to generate tarot cards
 startBtn.addEventListener('click', function(){
-
     var userBirthday = DOBInput.value
     console.log(userBirthday);
     var birthday = moment(userBirthday).format("MM/DD/YYYY");
     console.log(birthday)
 
-    //hiding and unhiding sections
-    mainPage.classList.add("hidden")
-    tarotCards.classList.remove("hidden");
-
-
    // if statement for birthday
    if ((moment(currentDate).diff(moment(birthday), "years") < 21)) {
     console.log("too young!");
+    myDIV.classList.add("hidden")
+    titleText.innerText = "Too young!"
     return
     }
+
+    //hiding and unhiding sections
+        mainPage.classList.add("hidden")
+        tarotCards.classList.remove("hidden");
 
     //if statement to check for user input values and creates custom user array
     if (brandyBox.checked) { //run if statement to check for "checks" for each alcohol type
@@ -135,7 +167,7 @@ startBtn.addEventListener('click', function(){
         cardOnePic.src = pngOne;
         cardOne.classList.add(cardOnePicTitle);
 
-        //card two 
+        //card two NEIL HELPPPPPP
         cardTwoTitleText = resultsArray[1]['name'];
         console.log(cardTwoTitleText);
         var cardTwoDescText = resultsArray[1]['desc'];
@@ -153,7 +185,7 @@ startBtn.addEventListener('click', function(){
         cardTwo.classList.add(cardTwoPicTitle);
     
 
-        //card three
+        //card three NEIL HELP HERE TOOOOOOO
         cardThreeTitleText = resultsArray[2]['name'];
         console.log(cardThreeTitleText);
         var cardThreeDescText = resultsArray[2]['desc'];
