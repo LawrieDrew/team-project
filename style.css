@@ -19,6 +19,11 @@ p {
     font-size: 2.5rem;
 }
 
+ul {
+    list-style-type: none;
+    text-align: left;
+}
+
 img{
     width: 100%;
     border-radius: 5%;
