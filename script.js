@@ -11,10 +11,17 @@ var card = document.querySelectorAll('.card');
 var cardOne = document.getElementById('card-one');
 var cardTwo = document.getElementById('card-two');
 var cardThree = document.getElementById('card-three');
+//Variables to target hiding and unhiding sections
+var tarotCards = document.getElementById('tarot-cards');
+var cocktailCards = document.getElementById('cocktail-cards');
+var mainPage = document.getElementById('header');
+
+//card tarot card one
 var cardOneTitle = document.getElementById('first-card-title');
-var cardOneDesc = document.getElementById('first-card-desc');
 var cardOneMeaningUp = document.getElementById('first-card-meaning_up');
 var cardOnePic = document.getElementById('card-one-pic');
+var cardOneSelect = document.getElementById('card-one-button');
+
 var cardTwoTitle = document.getElementById('second-card-title');
 var cardTwoDesc = document.getElementById('second-card-desc');
 var cardTwoMeaningUp = document.getElementById('second-card-meaning_up');
@@ -56,10 +63,15 @@ var DOBInput = document.querySelector("#birthday");
 
 //on click run function to generate tarot cards
 startBtn.addEventListener('click', function(){
+
     var userBirthday = DOBInput.value
     console.log(userBirthday);
     var birthday = moment(userBirthday).format("MM/DD/YYYY");
     console.log(birthday)
+
+    //hiding and unhiding sections
+    mainPage.classList.add("hidden")
+    tarotCards.classList.remove("hidden");
 
 
    // if statement for birthday
@@ -112,8 +124,6 @@ startBtn.addEventListener('click', function(){
         //card one
         cardOneTitleText = resultsArray[0]['name'];
         console.log(cardOneTitleText);
-        var cardOneDescText = resultsArray[0]['desc'];
-        console.log(cardOneDescText);
         var cardOneMeaningUpText = resultsArray[0]['meaning_up'];
         console.log(cardOneMeaningUpText);
         var cardOnePicTitle = cardOneTitleText.split(" ").join("")//Removes spaces from title to format for jpeg
@@ -121,9 +131,8 @@ startBtn.addEventListener('click', function(){
         console.log(pngOne)
 
         cardOneTitle.innerText = cardOneTitleText;
-        cardOneDesc.innerText = cardOneDescText;
         cardOneMeaningUp.innerText = cardOneMeaningUpText;
-        cardOnePic.src=pngOne
+        cardOnePic.src = pngOne;
         cardOne.classList.add(cardOnePicTitle);
 
         //card two 
@@ -171,7 +180,10 @@ startBtn.addEventListener('click', function(){
     })
 
     //Click actions for each card. Proper alcohol array is returned
-    cardOne.addEventListener('click', function(){
+    cardOneSelect.addEventListener('click', function(){
+        tarotCards.classList.add("hidden")
+        cocktailCards.classList.remove("hidden");
+
         if (cardOne.classList.contains("TheHierophant")){ //will need an else if statement for each card Name and add to card One Two and Three
             alcohol="brandy"
         }   else if (cardOne.classList.contains("Justice")){
