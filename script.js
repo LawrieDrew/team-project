@@ -407,7 +407,7 @@ startBtn.addEventListener('click', function(){
                 text += "</ul>";
                 document.getElementById("ingredients-Card-Three").innerHTML = text;
                 cocktailDirectionsThree.innerText = directions3;
-                })
+            })
 
         })
     })
@@ -541,8 +541,7 @@ startBtn.addEventListener('click', function(){
                 document.getElementById("ingredients-Card-Two").innerHTML = text;
                 cocktailDirectionsTwo.innerText = directions2;
             })
-        })
-
+    
             //Card three render
             thirdCocktailName = drinksFiltered[2]['strDrink'];
             console.log(thirdCocktailName)
@@ -582,6 +581,7 @@ startBtn.addEventListener('click', function(){
                 document.getElementById("ingredients-Card-Three").innerHTML = text;
                 cocktailDirectionsThree.innerText = directions3;
             })
+        })
     })
         cardThreeSelect.addEventListener('click', function(){
             tarotCards.classList.add("hidden")
@@ -716,45 +716,44 @@ startBtn.addEventListener('click', function(){
                     cocktailDirectionsTwo.innerText = directions2;
                 })
         
-                //Card three render
                 thirdCocktailName = drinksFiltered[2]['strDrink'];
-                console.log(thirdCocktailName)
-                cocktailNameThree.innerText = thirdCocktailName;
-                var searchNameThree = thirdCocktailName.split(" ").join("%")
-                console.log(searchNameThree)
-        
-        
-        
-                fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s='+searchNameThree)//changes based on user's choice of cocktail
-                .then(response => response.json())
-                .then(cocktailDetails => {
-                    console.log(cocktailDetails);
-                    cocktailArray = cocktailDetails['drinks'];
-                    console.log(cocktailArray)
-                    var directions3 = cocktailArray[0]['strInstructions']
-                    var ingredientsArray=[];
-                    var ingredient1 = cocktailArray[0]['strIngredient1']
-                    var ingredient2 = cocktailArray[0]['strIngredient2']
-                    var ingredient3 = cocktailArray[0]['strIngredient3']
-                    var ingredient4 = cocktailArray[0]['strIngredient4']
-                    var ingredient5 = cocktailArray[0]['strIngredient5']
-                    var ingredient6 = cocktailArray[0]['strIngredient6']
-        
-                    ingredientsArray.push(ingredient1, ingredient2, ingredient3, ingredient4, ingredient5, ingredient6);
-                    console.log(ingredientsArray);
-        
-                    filter_array(ingredientsArray);///TRYING TO REMOVE NULL VALUES
-                    console.log(ingredientsArray);
-                    //amends ingredients to card
-                    text = "<ul>";
-                    for (i = 0; i < ingredientsArray.length; i++) {
-                            text += "<li>" + ingredientsArray[i] + "</li>";
-                        }
-                        
-                    text += "</ul>";
-                    document.getElementById("ingredients-Card-Three").innerHTML = text;
-                    cocktailDirectionsThree.innerText = directions3;
-                })
+            console.log(thirdCocktailName)
+            cocktailNameThree.innerText = thirdCocktailName;
+            var searchNameThree = thirdCocktailName.split(" ").join("%")
+            console.log(searchNameThree)
+
+
+
+            fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s='+searchNameThree)//changes based on user's choice of cocktail
+            .then(response => response.json())
+            .then(cocktailDetails => {
+                console.log(cocktailDetails);
+                cocktailArray = cocktailDetails['drinks'];
+                console.log(cocktailArray)
+                var directions3 = cocktailArray[0]['strInstructions']
+                var ingredientsArray=[];
+                var ingredient1 = cocktailArray[0]['strIngredient1']
+                var ingredient2 = cocktailArray[0]['strIngredient2']
+                var ingredient3 = cocktailArray[0]['strIngredient3']
+                var ingredient4 = cocktailArray[0]['strIngredient4']
+                var ingredient5 = cocktailArray[0]['strIngredient5']
+                var ingredient6 = cocktailArray[0]['strIngredient6']
+
+                ingredientsArray.push(ingredient1, ingredient2, ingredient3, ingredient4, ingredient5, ingredient6);
+                console.log(ingredientsArray);
+
+                filter_array(ingredientsArray);///TRYING TO REMOVE NULL VALUES
+                console.log(ingredientsArray);
+                //amends ingredients to card
+                text = "<ul>";
+                for (i = 0; i < ingredientsArray.length; i++) {
+                        text += "<li>" + ingredientsArray[i] + "</li>";
+                    }
+                    
+                text += "</ul>";
+                document.getElementById("ingredients-Card-Three").innerHTML = text;
+                cocktailDirectionsThree.innerText = directions3;
+            })
 
         })
     })
