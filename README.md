@@ -2,11 +2,18 @@
 The Tipsy Tarot
 </p>
 
+![Screenshot](assets/TipsyTarot1.jpg)
+
 -------------
 
 This application uses dynamic css and html powered by javascript- while pulling from frameworks such as Bootstrap and Bulma to make the app responsive and modular- provides a unique experience for the social drinker:
 
 Once legal drinking age of the user has been confirmed, **The Tipsy Tarot** generates both a randomized Tarot Reading and Cocktail Recipe for the user based on their inputed criteria utilizing two supporting application programming interfaces. 
+
+
+![Screenshot](assets/TipsyTarot2.jpg)
+
+![Screenshot](assets/TipsyTarot3.jpg)
 
 -------------
 
@@ -15,6 +22,10 @@ Image here
 <p align="center">
 Pick your poison! 
 <p>
+
+![Screenshot](assets/TipsyTarot4.jpg)
+![Screenshot](assets/TipsyTarot5.jpg)
+![Screenshot](assets/TipsyTarot6.jpg)
 
 (Ask Rachel to explain the booze array and how it selects cards and recipes so you don't sound like an idiot)
 
