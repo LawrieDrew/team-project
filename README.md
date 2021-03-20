@@ -6,7 +6,7 @@ The Tipsy Tarot
 
 -------------
 
-This application uses dynamic css and html powered by javascript- while pulling from frameworks such as Bootstrap and Bulma to make the app responsive and modular- and provides a unique experience for the social drinker:
+This application uses dynamic css and html powered by javascript, and provides a unique experience for the social drinker:
 
 Once legal drinking age of the user has been confirmed,
 
