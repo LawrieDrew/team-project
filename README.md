@@ -6,7 +6,7 @@ The Tipsy Tarot
 
 -------------
 
-This application uses dynamic css and html powered by javascript- while pulling from frameworks such as Bootstrap and Bulma to make the app responsive and modular- provides a unique experience for the social drinker:
+This application uses dynamic css and html powered by javascript- while pulling from frameworks such as Bootstrap and Bulma to make the app responsive and modular- and provides a unique experience for the social drinker:
 
 Once legal drinking age of the user has been confirmed,
 
@@ -47,14 +47,14 @@ Flip this card a final time for mixology directions for each recipe.
 ![Screenshot](assets/TipsyTarot7.jpg)
 
 
-*And depending on how your reading goes- play again!*
+*And depending on how your reading goes - or if you need another drink - play again!*
 
 <p align="center">
 Cheers!
 </p>
 
 
-![Github URL](https://lawriedrew.github.io/team-project/)
+[Github URL](https://lawriedrew.github.io/team-project/)
 
 ###### copyright (c) [2021] [Columbia School of Engineering]
 
