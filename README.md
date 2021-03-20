@@ -29,7 +29,7 @@ Once legal drinking age of the user has been confirmed,
 Behold your future! 
 <p>
 
-You are presented with your cards chosen using Javascript. 
+You are presented with your cards, chosen utilizing Javascript. 
 
 ![Screenshot](assets/TipsyTarot4.jpg)
 
@@ -38,11 +38,11 @@ Click on a card to flip them over, utilizing CSS.
 
 ![Screenshot](assets/TipsyTarot5.jpg)
 
-The meaning of your cards are revealed. You can then select a card of your choice which will present three unique corresponding cocktail recipes.
+The meaning of your cards is revealed. You can then select a card of your choice which will present three unique corresponding cocktail recipes.
 
 ![Screenshot](assets/TipsyTarot6.jpg)
 
-Flip this card a final time for mixology directions for each recipe. 
+Flip these cards a final time for mixology directions for each recipe. 
 
 ![Screenshot](assets/TipsyTarot7.jpg)
 
