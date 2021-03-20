@@ -8,30 +8,44 @@ The Tipsy Tarot
 
 This application uses dynamic css and html powered by javascript- while pulling from frameworks such as Bootstrap and Bulma to make the app responsive and modular- provides a unique experience for the social drinker:
 
-Once legal drinking age of the user has been confirmed, **The Tipsy Tarot** generates both a randomized Tarot Reading and Cocktail Recipe for the user based on their inputed criteria utilizing two supporting application programming interfaces. 
+Once legal drinking age of the user has been confirmed,
+
+
+![Screenshot](assets/TipsyTarot3.jpg)
+
+
+ **The Tipsy Tarot** generates both a randomized Tarot Reading and Cocktail Recipe for the user based on their inputed criteria utilizing two supporting application programming interfaces. 
 
 
 ![Screenshot](assets/TipsyTarot2.jpg)
 
-![Screenshot](assets/TipsyTarot3.jpg)
+
 
 -------------
 
-Image here 
+
 
 <p align="center">
-Pick your poison! 
+Behold your future! 
 <p>
 
+You are presented with your cards chosen using Javascript. 
+
 ![Screenshot](assets/TipsyTarot4.jpg)
+
+Click on a card to flip them over, utilizing CSS.
+
+
 ![Screenshot](assets/TipsyTarot5.jpg)
+
+The meaning of your cards are revealed. You can then select a card of your choice which will present three unique corresponding cocktail recipes.
+
 ![Screenshot](assets/TipsyTarot6.jpg)
 
-(Ask Rachel to explain the booze array and how it selects cards and recipes so you don't sound like an idiot)
+Flip this card a final time for mixology directions for each recipe. 
 
-*Behold your future!*
+![Screenshot](assets/TipsyTarot7.jpg)
 
-Gif here to demo app 
 
 *And depending on how your reading goes- play again!*
 
@@ -39,11 +53,8 @@ Gif here to demo app
 Cheers!
 </p>
 
-::crowd goes wild::
 
-! Team Project URL
-
-! Github URL
+![Github URL](https://lawriedrew.github.io/team-project/)
 
 ###### copyright (c) [2021] [Columbia School of Engineering]
 
@@ -52,4 +63,5 @@ Cheers!
 ###### The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 ###### THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
 
