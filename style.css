@@ -64,6 +64,17 @@ img{
 
 }
 
+.select-btn {
+    background-color: transparent;
+    border: solid 1px #D4AF37;
+    border-radius: 20px;
+    color: #D4AF37;
+    font-size: 16px;
+    font-family: 'Macondo Swash Caps', cursive;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+
 .btn-main {
     background-color: transparent;
     border: solid 1px #d4af37;
